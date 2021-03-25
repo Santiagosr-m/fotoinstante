@@ -1,0 +1,1555 @@
+																																		*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:  'fira sans','helvetica',sans-serif;
+}
+body{
+	font-family: 'Fira Sans', 'helvetica' sans-serif;
+}
+#contenedor_carga{
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	z-index: 10000;
+}	
+
+
+a{
+	color: black;
+	text-decoration: none
+}
+li{list-style: none;}
+#carga{
+	
+	border: 6px solid black;
+	border-top-color: white;
+	border-radius: 100%;
+	width: 90px;
+height: 90px;
+position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	margin: auto;
+	color: white;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items:center;
+
+	-webkit-animation: girar 1.5s linear infinite;
+	-o-animation: girar 1.5s linear infinite ;
+	animation: girar 1.5s linear infinite ;
+}
+#letra{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	font-size: 47px;
+	font-weight: 600;
+	color: white;
+	margin: auto;
+		display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items:center;
+}
+
+@keyframes girar{
+	from{ transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+h1{
+	color:white;
+	text-align: center;
+	font-family: 'Fira Sans','helvetica', sans-serif;
+	font-weight:  600 ;
+
+font-size: 40px;
+}
+
+@media (min-width: 900px){
+h1{
+	color:white;
+	font-family: 'Fira sans', 'helvetica', sans-serif;
+	font-weight:  600 ;
+	text-align: end;
+	margin-right: 7%;
+
+font-size: 40px;
+}
+}
+
+
+@media (min-width: 900px){
+	h1{
+		font-size: 50px;
+		color:white;
+	font-family: 'Fira Sans', 'helvetica', sans-serif;
+	font-weight:  600 ;
+	text-align: end;
+	margin-right: 7%;
+
+font-size: 40px;
+	}
+}
+
+/*menu*/
+header{
+	width: 100%;
+	height: 500px;
+	background-image:url(../images/foto_index.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+
+
+.cabezote{
+	
+	height: 390px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
+	display: flex;
+	justify-content: space-between;
+	color: white;
+}
+
+
+
+.identificador{
+	margin: 30px;
+	width: 200px;
+	
+}
+.identificador img{
+width: 100%;
+	
+}
+.caja-menu{
+	display: flex;
+	justify-content: flex-end;
+	margin: 30px;
+}
+#bmenu{
+	display: none;
+}
+.cabezote label{
+
+	cursor: pointer;
+	font-size: 35px;
+	font-size: 35px;
+	display: none;
+	margin: 30px;
+}
+
+.menu ul{
+	margin-bottom: 0;
+display: flex;
+	list-style: none;
+	
+}
+.active{
+	border-bottom: solid 1px white;
+}
+.menu ul ul{
+	display: none;
+	background-color: rgba(255, 255, 255, 0);
+	color: black;
+	box-shadow:10px 10px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+
+	
+}
+.submenu li a{
+	border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+.menu a{
+	display: block;
+	color:white;
+	padding: 15px 15px;
+	margin: 0 5px ;
+	text-decoration: none;
+	font-weight: 600;
+}
+.menu i{
+	font-size: 10px;
+	margin: 5px;
+	
+}
+ 
+
+.menu ul li:hover ul{
+	display: block;
+	position: static;
+	
+}
+
+@media (max-width: 900px){
+	
+	.cabezote label{
+		display: block;
+	}
+	.menu{
+		position: absolute;
+		top:130px;
+		width: 100%;
+		transform:translate(106%);
+		transition: all 0.3s;
+		overflow: hidden;
+		display: none;
+	}
+	.menu ul{
+			margin: 0 30px;
+		flex-direction: column;
+		background-color: white;
+	}
+	.menu ul ul{
+	box-shadow:none;
+
+	
+}
+	.menu a{
+		padding: 25px;
+	border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+		color: black;
+
+	}
+	.menu ul li:hover ul{
+		display: none;
+	}
+	.menu a i {
+		position: absolute;
+		right: 60px;
+		font-size: 20px;
+	}
+	#bmenu:checked ~ .menu{
+		display: block;
+		transform: translateX(6%)
+	
+	
+	}
+	
+}
+
+/*index*/
+
+
+
+.inicio .textos{
+	width: 80%;
+	margin:  70px auto;
+max-width: 600px;
+
+}
+
+.inicio .textos h2{
+	margin-bottom: 10px;
+	text-align: end
+	
+}
+
+.inicio .textos h2{
+	margin-bottom: 12px;
+	font-style: italic;
+	max-width: 700px;
+	
+}
+.inicio .textos h3{
+	margin-bottom: 40px;
+	margin-right: 6px;
+	font-weight: 400;
+	font-size: 16px;
+	text-align: end;
+	color: gray;
+	
+}
+
+
+.inicio .textos p{
+	font-size: 15px;
+	margin: 10px;
+}
+
+
+.inicio .textos h4{
+	font-size: 15px;
+	margin: 20px 0;
+	font-size: 20px;
+	margin-top: 40px;
+}
+
+.foto{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position:relative;
+	top: -20px;
+}
+
+.foto .caja{
+	width: 200px;
+	
+}
+.foto img{
+	width: 100%;
+}
+
+@media screen and (min-width: 700px){
+	
+	.inicio header{
+		background-position: center;
+	}
+	.inicio .textos h2{
+		text-align: start;
+	}
+	
+}
+
+
+
+.banner{
+	width: 100%;
+	margin: 700px;
+	margin: 30px auto;
+	height: 500px;
+	
+	
+	background-image: url(../images/michelrios-contemporaneo.jpg);
+	background-size:cover;
+	background-position: center;
+	
+	
+	animation-name: banner;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	
+}
+	
+@keyframes banner{
+	0%,9%{
+			background-image: url(../images/z-gerhardbruhl-ra.jpg);
+		opacity: 1;
+	}
+	
+
+	
+   10%,19%{
+	 	background-image: url(../images/Sebastian_Agudelo_estudio2.jpg);
+		opacity: 1;
+	}
+
+	
+	20%,29%{
+		
+	
+	}
+	
+	40%,49%{
+			
+			background-image: url(../images/Laurabet-inorganico.jpg);
+		opacity: 1;
+			
+		
+	}
+	
+
+
+	50%,59%{
+				background-image: url(../images/valentina_cuspoca_pareidolia.jpg);
+		opacity: 1;
+			 	background-image: url(../images/michellerios-rm.jpg);
+		opacity: 1;
+		
+	}
+
+		60%,69%{
+				background-image: url(../images/z-camilauza-rm.jpg);
+		opacity: 1;
+	}
+	
+		70%,79%{
+			background-image: url(../images/z-gerhardbruhl-propuesta.jpg);
+		opacity: 1;
+			
+			
+	}
+
+		80%,89%{
+		
+					background-image: url(../images/andrea_albornozCL_contraluz2.jpg);
+		opacity: 1;
+		
+	}
+
+		90%,100%{
+		background-image: url(../images/z-autorretratopp-nicolasanchez.jpg);
+		opacity: 1;
+		
+		
+	}
+
+}
+@media screen and (min-width: 700px){
+	.banner{
+		height: 800px;
+	}
+}
+/*autorretrato*/
+
+#autorretrato header{
+
+	background-image:url(../images/z-gerhardbruhl-ra.jpg);
+	background-position: center;
+}
+
+.descri{
+
+	width: 90%;
+	
+	margin: auto;
+	padding: 20px 40px;
+	
+	display: flex;
+	flex-direction: column;
+	margin-top: 70px;
+
+}
+
+
+.descri h2{
+	
+	margin-bottom: 20px;
+	font-size: 25px;
+	
+	
+}
+.descri h3{
+font-style: italic;	
+font-size: 17px;
+
+}
+.descri p{
+	width: 100%;
+
+	font-size: 15px;
+	padding:  30px 0;
+	padding-bottom: 0;
+	
+}
+.descri h4{
+	font-size:14px;
+	font-weight: 400;
+	text-align: end;
+	margin-top: 10px;
+	margin-right: 9px;
+	color: rgba(0, 0, 0, 0.38);
+}
+
+
+
+.descris{
+
+	width: 90%;
+	
+	margin: auto;
+	padding:40px;
+	
+	display: flex;
+	flex-direction: column;
+	max-width: 800px;
+	
+
+}
+
+.descris h3{
+font-style: italic;	
+font-size: 17px;
+;
+	
+
+}
+.descris p {
+	font-size: 15px;
+}
+.descris h4{
+	font-size:14px;
+	font-weight: 400;
+	text-align: end;
+	margin-top: 10px;
+	margin-right: 9px;
+	color: rgba(0, 0, 0, 0.38);
+	margin-bottom: 10px
+}
+
+
+.descriauto{
+
+	width: 90%;
+	
+	margin: auto;
+	padding:50px;
+	padding-bottom: 90px;
+	display: flex;
+	flex-direction: column;
+	max-width: 800px;
+	max-width: 700px;
+	
+
+}
+
+
+
+.descriauto p {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.38);
+}
+
+.descriauto h5{
+	font-size:14px;
+	font-weight: 700;
+	
+	margin-top: 20px;
+	margin-right: 9px;
+	color: rgba(0, 0, 0, 0.38);
+	margin-bottom: 10px
+}
+
+.descriauto hr{
+	margin: 20px 40px;
+	color: rgba(0, 0, 0, 0.1);
+	border: none;
+	border-bottom: solid 1px;
+}
+
+
+
+@media screen and (min-width: 700px){
+	
+.descri{
+
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+	padding: 40px 20px;
+	display: flex;
+	flex-direction: row;
+	margin-top: 70px;
+}
+	.descri .izq{
+		width:35%;
+		display: flex;
+		flex-direction: column;
+		-ms-align-items: flex-end;
+		align-items:flex-end ;
+	}
+		.descri .der{
+		width:65%;
+	}
+.descri h2{
+	width: 100%;
+	font-size: 30px;
+	text-align: end;
+	margin-bottom: 15px;
+	
+}
+	
+	.descri h3{
+		width: 220px;
+		text-align: end
+	}
+.descri p{
+	width: 100%;
+font-size: 15px;
+ padding: 0 20px;
+	
+}	
+	
+	
+	.descri h4{
+		margin-right: 0;
+	}
+	
+
+
+.descris{
+
+	width: 90%;
+	
+	margin: auto;
+	padding:50px 50px;
+	display: flex;
+	flex-direction: row;
+	max-width: 800px;
+	
+
+}
+
+.descris h3{
+
+font-style: italic;	
+font-size: 17px;
+;
+	
+
+}
+.descris .izqs{
+	width: 30%;
+	text-align: end;
+}
+	
+.descris .ders{
+	width: 70%;
+}
+.descris p {
+	width: 100%;
+	font-size: 15px;
+	padding-left:34px;
+}
+.descris h4{
+	font-size:14px;
+	font-weight: 400;
+	text-align: end;
+	margin-top: 10px;
+	margin-right: 0;
+	color: rgba(0, 0, 0, 0.38);
+	margin-bottom: 10px
+}
+	
+
+	
+
+
+}
+
+.categoria{
+	width: 100%;
+
+}
+.search {
+	width:80%;
+	margin: auto
+}
+.search form{
+width: 100%;	
+	display: flex;
+	justify-content:center;
+	margin: 40px 0;
+
+}
+.search .barra-busqueda{
+width: 50%;	
+	height: 40px;
+	line-height: 40px;
+	background: #ededed;
+	padding: 0 20px;
+	border-radius: 100px;
+	border: none;
+	font-size: 16px;
+		text-align: center;
+	
+}
+.categoria a.activo{
+	color: black;
+	
+}
+
+.search .categoria{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 10px
+}
+
+.categoria a{
+	color: gray;
+	font-size: 18px;
+	padding: 10px 20px;
+	
+}
+
+
+
+
+.contenedor{
+	width: 100%;
+	max-width: 1400px;margin: auto;
+	
+}
+.grid{
+	position: relative;
+		margin: auto;
+	width: 100%;
+	opacity: 0%;
+	transition: opacity 0.3s linear 0.5s;
+
+}
+.grid.imagenes-cargadas{
+opacity: 1;	
+}
+.grid .item{
+position: absolute;	
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(100% - 20px);
+	
+}
+.grid .item-contenido{
+	position: relative;
+	
+}
+.grid .item img{
+	width: 100%;
+	height: 400px;
+	filter: grayscale(100%);
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.grid .item img{
+	filter:grayscale(0%);
+}
+@media screen and (min-width: 700px){
+	.grid{
+		width: 90%;
+		margin: auto;
+	}
+	.grid .item{
+position: absolute;	
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(50% - 20px);
+	
+	}
+}
+	@media screen and (min-width: 1080px){
+	.grid{
+		width: 90%;
+		margin: auto;
+	}
+	.grid .item{
+position: absolute;	
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(33% - 20px);
+	
+}
+}
+
+#galeriaco ul{
+	
+display: flex;
+width: 100%;
+justify-content: space-around;
+flex-wrap: wrap;
+max-width: 1200px;
+margin: auto;
+}
+#galeriaco img{
+width: 400px;	
+	height: 300px;
+	margin-bottom: 30px;
+	object-fit: cover;
+}
+
+.grid img:hover{
+	filter: brightness(30%);
+		cursor:pointer;
+}
+
+
+.modal{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.86);
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content:center;
+	-ms-align-items: center;
+	align-items:center;
+	
+}
+
+.modal__img{
+	max-height:85%;
+	max-width: 80%;
+}
+
+.modal__boton{
+width: 100%;
+height: 100%;
+position:absolute;
+	cursor: pointer;
+}
+
+
+.item-contenido p{
+position: absolute;
+	width: 100%;
+	height: 10%;
+	bottom: 5px;
+	color: white;
+	font-size: 10px;
+	opacity: 0%;
+	padding: 15px;
+	text-align: end
+	
+	
+}
+.item-contenido p:hover{
+
+	opacity: 100%;
+	background-color: rgba(0, 0, 0, 0.86);
+	
+	
+}
+
+
+#retrato header{
+
+	background-image:url(../images/z-michellerios-propuesta.jpg);
+	background-position:top;
+}
+
+/*about*/
+
+.about header{
+	
+		background-image:url(../images/about.jpg);
+	background-position: center;
+	
+}
+.redes a :hover{
+	color: gray;
+}
+
+.direccion{
+	width: 380px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-size: 14px;
+	border-bottom: solid 1px rgba(128, 128, 128, 0.13);
+	padding: 20px;
+	margin: auto;
+	-ms-align-items: center;
+	align-items:  center;
+
+
+}
+
+.direccion .mate{
+	width: 90px;
+	width: 90px;
+	display: flex;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items:center ;
+	justify-content: center;
+	text-align: center;
+	margin: 7px;
+}
+.direccion .mate img{
+	width: 90px;
+	width: 90px;
+	border-radius: 100px;
+	margin-bottom: 4px;
+}
+#about{
+	
+	margin: 50px auto;
+	color: gray;
+}
+#about p{
+	padding: 2px;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-weight: 300;
+}
+#about .gr ul{
+display: flex;	
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: center;
+	max-width: 1100px;
+	margin: auto;
+	padding: 20px;
+	
+}
+
+.line{
+	height: 70px;
+	width: 1px;
+	background-color: rgba(124, 124, 124, 0.08);
+	margin: 10px;
+}
+#about .gr ul li{
+	width: 90px;
+	height: 140px;
+	background-color: white;
+	margin: 10px;;
+	font-size: 15px;
+}
+#about .gr ul li img{
+width: 90px;	
+	height: 90px;
+	border-radius: 100px;
+}
+
+.grupo{
+	width: 90px;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	font-size: 40px;
+	background-color: black;
+	color:white;
+	border-radius: 100px;
+	
+}
+
+
+@media screen and (min-width: 700px){
+.about header{
+	
+		background-image:url(../images/aboutdos.jpg);
+	background-position: center;
+	
+}
+
+
+}
+
+.gr h3{
+	color: rgba(0, 0, 0, 0.28);
+	font-weight: 400;
+	margin: 30px;
+}
+.gr {
+	max-width: 1100px;
+	margin: auto;
+}
+/*objeto*/
+
+
+#objeto header{
+
+	background-image:url(../images/michelrios-contemporaneo.jpg);
+	background-position: center;
+}
+
+@media screen and (min-width: 1080px){
+	
+#objeto header{
+
+	background-image:url(../images/michelrios-contemporaneo.jpg);
+
+	
+}	
+	
+}
+@media screen and (min-width: 1400px){
+	
+#objeto header{
+
+	background-image:url(../images/michelrios-contemporaneo.jpg);
+
+	
+}	
+	
+}
+
+
+
+/*fotoensayo*/
+
+.ensayo header{
+	
+	background-image: url(../images/sandra_suarez_3b.jpg);
+	background-position: center;
+	
+}
+
+@media screen and (min-width: 800px){
+	
+.ensayo header{
+	
+	background-image: url(../images/sandra_suarez_3bdos.jpg);
+	background-position: center;
+	
+}	
+	
+}
+
+.ontro{
+	width: 90%;
+	margin: 50px auto ;
+	max-width: 800px
+}
+
+.ontro p{
+	width: 90%;
+	margin: auto;
+	font-size: 16px;
+}
+
+#ensayoss{
+	width: 95%;
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+#ensayoss .caja{
+	margin: 30px 0;
+}
+#ensayoss .caja:hover{
+	opacity: 80%;
+	
+	
+}
+
+#ensayoss .caja .tex{
+	width: 90%;
+	margin: auto
+}
+#ensayoss .caja h3{
+	margin: 20px 0 0 0;
+	font-size: 25px
+}
+#ensayoss .caja h4{
+	margin: 0;
+	font-size: 17px;
+	font-weight: 500
+}
+#ensayoss .caja h5{
+	margin: 5px 0;
+	margin-bottom: 20px;
+	font-size: 13px;
+	font-weight: 500;
+}
+#ensayoss img{
+	width: 100%;
+}
+#ensayoss hr{
+opacity: 30%;
+}
+
+@media screen and (min-width: 700px){
+	
+
+#ensayoss{
+	width: 95%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+#ensayoss .caja{
+	margin: 0;
+	margin-bottom: 40px;
+	width: 47%;
+}
+	#ensayoss hr{
+border: none;
+}
+	
+}
+/*silueta*/
+#silueta header{
+	background-image: url(../images/irinamoyano-s.jpg);
+	background-position: top;
+	
+}
+
+/*estudio*/
+#estudio header{
+	background-image: url(../images/sebastian_agudelo_estudio22.jpg);
+	background-position: center;
+	
+}
+
+/*footer*/
+footer{
+	background-color: rgb(0, 0, 0);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items:center;
+	font-size: 15px;
+	height: auto ;
+}
+.identificadorf{
+
+	padding-top: 30px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	width:85%;
+	margin: auto;
+	font-size: 14px;
+}
+
+.identificadorf .textosf{
+	padding: 20px 5px;
+	display: flex;
+	flex-direction: column;
+	font-weight: 300;
+	text-align: center;
+}
+.identificadorf a{
+	display: flex;
+	margin: auto;
+width: 120px;
+height: 70px;}
+
+.textosf h7{
+	font-weight: 200;
+	margin: 1px 0;
+}
+
+
+
+.identificadorf img{
+
+width: 100%;
+
+}
+
+
+
+
+.descripcion{
+	margin:  25px 15%  ;
+	font-size: 13px;
+	text-align: center;
+	
+}
+
+
+
+.redes{
+	
+	margin: 60px;
+	display: flex;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	margin-bottom: 20px;
+	
+}
+
+
+
+
+.iconos a{
+	font-size: 20px;
+	margin:0 ;
+	margin-top: 0;
+	color: white;
+	display: flex;
+	-ms-align-items: center;
+	align-items:center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+
+
+
+
+.iconos i{
+	font-size: 35px;
+margin-right: 10px;	
+}
+.iconos a:hover{
+	color: rgba(255, 255, 255, 0.36);
+}
+
+
+
+
+
+.redes p{
+	margin: 5px 0;
+	font-family: 'Fira Sans', 'helvetica', sans-serif;
+}
+
+
+
+
+
+
+
+.copy{
+	width: 80%;
+	margin: 0 auto ;
+	padding: 20px;
+	text-align: center;
+	font-size: 11px;
+	color:rgba(255, 255, 255, 0.36);
+}
+.all{
+		border-bottom: solid 0.5px rgba(255, 255, 255, 0.27);
+		padding-bottom: 30px;
+	opacity: 95%;
+		
+	}
+	.redes a {
+		color: white;
+		margin: 5px 30px;
+	}
+	
+
+@media screen and (min-width: 700px){
+
+footer{
+	padding: 20px ;
+	}
+
+	.identificadorf{
+		padding: 0;
+		margin: 0;
+		margin-bottom: 15px;
+		flex-direction:row;
+		-ms-align-items: ;
+		align-items:center;
+		justify-content: center;
+		margin: auto;
+		
+	
+	}
+	
+	.programas{
+		font-weight: 300;
+		color: lightgray;
+		display: flex;
+		font-size: 15px;
+		-ms-align-items: center;
+		align-items:center;
+		font-family: 'Fira Sans',  'open-sans', sans-serif;
+	}
+	
+	.programas .lip{
+		width: 1px;
+		height: 40px;
+		background-color: rgba(211, 211, 211, 0.6);
+		margin: 0 10px;
+	}
+	.programas h7{
+		font-weight: 100;
+		text-align: left;
+	}
+	.programas p{
+	
+		text-align: left;
+	}
+	
+	.imsd a{
+		width: 100px;
+		margin: 0;
+		opacity: 90%;
+		height: 60px;
+		
+	}
+	.imsd a img{
+		width: 100%;
+	}
+
+	
+	
+	.all .top{
+		width: 90%;
+		max-width: 900px;
+		margin: 20px auto;
+		justify-content: space-between;
+		
+
+	}
+	.descripcion{
+	margin: 0 ;
+	width: 80%;
+	text-align:start;
+	max-width: 500px;
+	margin-left: 20%;
+		
+	}
+	.redes{
+		margin: 0;
+	}
+	.redes a {
+		color: white;
+		margin: 5px 25px;
+	}
+	
+	.descripcion p{
+		font-size: 13px;
+		
+	}
+	.all .top{
+		display: flex;
+		
+	}
+
+}
+	@media screen and (min-width: 1300px){
+	.all{
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		-ms-align-items: center;
+		align-items:center;
+		width: 100%;
+		border-bottom: solid 0.5px rgba(255, 255, 255, 0.27);
+	}
+	.footer{
+		border: none;
+	}
+
+	.copy{
+		font-size: 12px;
+	}
+		
+		.top{
+			width: 50%;
+			margin-left: 100px;
+			padding-left: 60px;
+		}
+		.identificadorf{
+width: 30%;
+			margin-left: 0;
+			margin-right: 60px;
+		
+	
+
+
+}
+		.descripcion{
+				max-width:420px ;
+			margin: 10px 80px;
+	}
+	
+
+.car{
+	display: flex;
+	justify-content: center;
+}
+.car .prog{
+	text-align: end;
+	margin: 0 5px;
+	
+}
+}
+
+body{
+	font-family: 'Fira Sans', 'helvetica' sans-serif;
+}
+
+
+.ensayoj header{
+background-image: url(../images/ensayoluisa.jpg);
+	background-position: center;
+}
+
+.ensayojuli .ontro{
+	font-family: 'Fira Sans', 'helvetica' sans-serif;
+	line-height: 23px;
+}
+
+
+.ensayojuli p{
+	margin:  30px auto ; 
+	width: 85%;
+	line-height: 23px;
+}
+
+.ensayojuli .caja{
+	margin-bottom: 30px;
+}
+
+.ensayojuli img{
+	width: 100%;
+}
+.ensayojuli .caja h3{
+	margin: 5px 0 0 0;
+	font-size: 25px
+}
+.ensayojuli .caja h4{
+	margin: 5px 0 0 0;
+	font-size: 19px;
+	font-weight: 600;
+	font-style: italic;
+	max-width: 500px;
+}
+.ensayojuli .caja h5{
+	margin: 0;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.ensayol header{
+background-image: url(../images/ensayoluisadoso.jpg);
+	background-position: center;
+}
+#referent{
+	width: 85%;
+	margin: auto;
+	
+	
+}
+#referent a{
+color: gray;
+	
+	
+}
+#referent a:hover{
+	color: #4e4ead;
+}
+#referent h4{
+margin: 0 0 20px;	
+}
+
+@media screen and (min-width: 1100px){
+	#referent{
+	width: 80%;
+	margin: auto;
+	
+}
+	
+}
+
+
+	@media screen and (min-width: 1100px){
+.ensayol header{
+background-image: url(../images/ensayoluisadosofond.jpg);
+	background-position:center;
+}
+}
+
+.ensayot header{
+background-image: url(../images/ensayotatiana.jpg);
+	background-position: center;
+}
+
+.ensayog header{
+background-image: url(../images/ensayogeotres.jpg);
+	background-position: center;
+}
+.ensayogo header{
+background-image: url(../images/egomezuno.jpg);
+	background-position: center;
+}
+.ensayoja header{
+background-image: url(../images/ejahilimuno.jpg);
+	background-position: center;
+}
+.ensayom header{
+background-image: url(../images/emorales.jpg);
+	background-position: center;
+}
+
+.ensayor header{
+background-image: url(../images/eramiresuno.jpg);
+	background-position: center;
+}
+.ensayol header{
+background-image: url(../images/eleonardoPortada.jpg);
+	background-position: center;
+}
+.diario header{
+background-image: url(../images/juanitadiario.jpg);
+	background-position: center;
+}
+
+	@media screen and (min-width: 1100px){
+.diario header{
+
+	background-position:bottom;
+}
+		.ensayoja header{
+background-image: url(../images/ejahilimuno.jpg);
+	background-position: bottom;
+}
+		.ensayor header{
+background-image: url(../images/eramiresuno.jpg);
+	background-position: top;
+}
+}
+
+
+
+header{
+	width: 100%;
+	height: 500px;
+	background-image:url(../images/foto_index.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+
+#antotipia header{
+	width: 100%;
+	height: 500px;
+	background-image:url(../images/antitopia-manuelsanchez.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.ensayotorres header{
+	width: 100%;
+	height: 500px;
+	background-image:url(../images/mapatorres-ensayo2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.ensayoluna header{
+	width: 100%;
+	height: 500px;
+	background-image:url(../images/carlos_luna_bodegon_fotoensayo_2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.ensayomillan header{
+	width: 100%;
+	height: 500px;
+	background-image:url(../images/valentinami_Fotoensayo.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#fotomontaje header{
+	width: 100%;
+	height: 500px;
+	background-image:url(../images/lorena_fotomontaje.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.portafo header{
+	width: 100%;
+	height: 500px;
+	background-image:url(../images/santiagocamarados.jpg);
+	background-size: cover;
+	background-position: center;
+}
